@@ -1,3 +1,6 @@
+from math import pow, sqrt
+
+
 def addition(first, second):
     return first + second
 
@@ -25,7 +28,9 @@ def show_menu():
     print("2. Subtraction")
     print("3. Multiplication")
     print("4. Division")
-    print("5. Quit\n")
+    print("5. Exponential")
+    print("6. Square Root")
+    print("7. Quit\n")
 
 
 while True:
@@ -52,6 +57,12 @@ while True:
             result = division(first, second)
             print(result)
         elif operation == 5:
+            print(int(pow(first, second)))
+
+        elif operation == 6:
+            print(f"Square root of {first}: {sqrt(first)}")
+            print(f"Square root of {second}: {sqrt(second)}")
+        elif operation == 7:
             break
         else:
             print("Bad choice!")
